@@ -1,0 +1,109 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true"/>
+    <script src="~/lib/jquery/jquery.js"></script>
+</head>
+<body>
+@{
+        <script>
+            function returnRoomno()
+            {
+                return @ViewBag.id;
+            }
+        </script>
+    }
+    
+    <nav>
+        <div class="navbar">
+            <div id="sub"class="nav-logo" onclick="ll()"> 
+                TicTic<span>.com</span>
+
+                
+            </div>
+        </div>
+    </nav>
+    <div class="room-no dis cnt">
+        <div>
+            Room no : <span id="roomno">******</span>
+        </div>
+    </div>
+    
+    <div class="main">
+
+        <div class="user-profile">
+            <div> <input class="name" id="FirstName" type="text" placeholder="FirstName" /></div>
+             <div><input class="name"id="LastName" type="text" placeholder="LastName" /></div>
+              <div><button class="savename" onclick="sendName()" id="SaveName">save Name</button></div>
+              <div><textarea id="comment"rows="5" cols="20" placeholder="comment pass here"></textarea></div>
+              <div><button class="savename" onclick="sendComment()">Put comment</button></div>
+              <div>
+                <button class="savename ready" onclick="ready()">ready</button>
+            </div>
+        </div>
+        <div class="canvas-body dis cnt">
+        
+           
+            
+            
+        
+            <div id="cont">
+            <div id="choser" class="canvas hidden">
+                <div id="circle" class="canvas-pixel">  <div class="canvas-pixel-content"><img   src="~/images/circle.svg"/></div></div>
+                 <div id="cross" class="canvas-pixel"> <div class="canvas-pixel-content"><img   src="~/images/cross.svg"/></div></div>
+                </div>
+            </div>
+            
+        </div>
+        <div id="oppenent-bar" class="oppenent-bar">
+           
+        </div>
+       
+    </div>
+    
+    <div style="display:none;">
+        <div id="cir">
+        <img   src="~/images/circle.svg"/>
+        </div>
+            
+        <div id="cro">
+        <img  src="~/images/cross.svg"/>
+    </div>
+    </div>
+    
+        
+        
+        <script src"~/js/site.js"></script>
+        <script id="scr">
+            
+            //var circle = "circle.svg";
+            //var cross = "cross.svg";
+            //var o = `<div class="canvas-pixel-content"><img src="${circle}" alt=""></div>`;
+        
+            //var x = document.getElementsByClassName("canvas-pixel");
+       
+            
+            //Array.from(x).forEach(function(item, index){
+   
+            //    red(item);
+
+            //});
+            //function red(e)
+            //{
+            //    e.innerHTML = o;
+            //}
+
+       </script>
+       <script src="~/lib/signalr/dist/browser/signalr.js" ></script>
+       <script src="~/js/Connection.js" asp-append-version="true"></script>
+
+</body>
+</html>
